@@ -1,12 +1,13 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { TiArrowSortedUp } from "react-icons/ti";
+import { FaTrophy } from "react-icons/fa";
 
 const TopViewsCard = () => {
   return (
     <div className="TopViewsCard">
-      <Row className="align-items-center justify-content-center">
-        <Col md lg={3}>
+      <Row className="h-25 align-items-center justify-content-center">
+        <Col lg xl={3}>
           <div className="xp-custom-views xp-24H-views shadow p-3">
             <h6 className="text-start lgt-gry">LAST 24H VIEWS</h6>
             <div classname="d-flex flex-column justify-content-center align-items-center">
@@ -18,7 +19,7 @@ const TopViewsCard = () => {
             </div>
           </div>
         </Col>
-        <Col md lg={3}>
+        <Col lg xl={3}>
           <div className="xp-custom-views xp-30D-views shadow p-3">
             <h6 className="text-start lgt-gry">LAST 30 DAYS VIEWS</h6>
             <div classname="d-flex flex-column justify-content-center align-items-center">
@@ -30,7 +31,7 @@ const TopViewsCard = () => {
             </div>
           </div>
         </Col>
-        <Col md lg={3}>
+        <Col lg xl={3}>
           <div className="xp-custom-views xp-12M-views shadow p-3">
             <h6 className="text-start lgt-gry">LAST 12 MONTHS VIEWS</h6>
             <div className="d-flex flex-row justify-content-center align-items-center">
@@ -38,11 +39,17 @@ const TopViewsCard = () => {
             </div>
           </div>
         </Col>
-        <Col md lg={3}>
+        <Col lg xl={3}>
           <div className="xp-custom-views xp-views-record shadow p-3">
             <h6 className="text-start lgt-gry">VIEWS RECORD</h6>
-            <div className="d-flex flex-row justify-content-center align-items-center">
+            <div className="d-flex flex-column justify-content-between align-items-center">
               <p className="mb-0 ms-2 gry font-40 xp-txt-views">1088</p>
+              <div className="h-100 w-100 d-flex flex-row justify-content-end align-items-end">
+                <FaTrophy className="yellow" />
+                <p className="mb-0 ms-2 lgt-gry xp-txt-views">
+                  18th October 2021
+                </p>
+              </div>
             </div>
           </div>
         </Col>

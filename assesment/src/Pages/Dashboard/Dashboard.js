@@ -14,7 +14,7 @@ const Dashboard = () => {
   return (
     <div className="Dashboard">
       <TopViewsCard />
-      <Row className="align-items-center justify-content-center my-4">
+      <Row className="h-50 align-items-center justify-content-center my-4">
         <Col md lg={6}>
           <div className="xp-post-per-month p-3">
             <h6 className="text-start lgt-gry">VIEWS TIMING</h6>

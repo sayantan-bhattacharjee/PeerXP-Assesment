@@ -1,11 +1,28 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
   padding: 0px;
   margin: 0px;
-  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  //   sans-serif;
-  // -webkit-font-smoothing: antialiased;
-  // -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  width: 100%;
+  background-image: none;
+}
+
+#root {
+  height: 100%;
 }
 
 // Custom Style Starts Here
@@ -20,11 +37,29 @@ body {
 .green {
   color: #00df00;
 }
+.yellow {
+  color: #d3af02;
+}
+.lgt-yellow {
+  color: #ffd404;
+}
+.blu {
+  color: #038f8f;
+}
+.lgt-blue {
+  color: aqua;
+}
 // font size
 .font-40 {
   font-size: 40px;
 }
+.font-30 {
+  font-size: 30px;
+}
 .xp-custom-views {
-  height: 180px;
+  // height: 180px;
   border-radius: 10px;
 }
+// .xp-custom-posts {
+//   height: 400px;
+// }
