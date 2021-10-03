@@ -3,11 +3,14 @@ import { Row, Col } from "react-bootstrap";
 import { TiArrowSortedUp } from "react-icons/ti";
 import { FaTrophy } from "react-icons/fa";
 
+// Style Imports
+import "./TopViewsCard.scss";
+
 const TopViewsCard = () => {
   return (
     <div className="TopViewsCard">
-      <Row className="h-25 align-items-center justify-content-center">
-        <Col lg xl={3}>
+      <Row className="h-100 align-items-center justify-content-center">
+        <Col lg xl={3} className="h-100">
           <div className="xp-custom-views xp-24H-views shadow p-3">
             <h6 className="text-start lgt-gry">LAST 24H VIEWS</h6>
             <div classname="d-flex flex-column justify-content-center align-items-center">
@@ -19,7 +22,7 @@ const TopViewsCard = () => {
             </div>
           </div>
         </Col>
-        <Col lg xl={3}>
+        <Col lg xl={3} className="h-100">
           <div className="xp-custom-views xp-30D-views shadow p-3">
             <h6 className="text-start lgt-gry">LAST 30 DAYS VIEWS</h6>
             <div classname="d-flex flex-column justify-content-center align-items-center">
@@ -31,7 +34,7 @@ const TopViewsCard = () => {
             </div>
           </div>
         </Col>
-        <Col lg xl={3}>
+        <Col lg xl={3} className="h-100">
           <div className="xp-custom-views xp-12M-views shadow p-3">
             <h6 className="text-start lgt-gry">LAST 12 MONTHS VIEWS</h6>
             <div className="d-flex flex-row justify-content-center align-items-center">
@@ -39,7 +42,7 @@ const TopViewsCard = () => {
             </div>
           </div>
         </Col>
-        <Col lg xl={3}>
+        <Col lg xl={3} className="h-100">
           <div className="xp-custom-views xp-views-record shadow p-3">
             <h6 className="text-start lgt-gry">VIEWS RECORD</h6>
             <div className="d-flex flex-column justify-content-between align-items-center">
