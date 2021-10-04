@@ -21,19 +21,19 @@ const WeekDayChart = () => {
         height={50}
         options={{
           maintainAspectRatio: false,
-          //   scales: {
-          //     yAxes: [
-          //       {
-          //         ticks: {
-          //           font: {
-          //             family: "Verdana", // Your font family
-          //             size: 14,
-          //           },
-          //           beginAtZero: true,
-          //         },
-          //       },
-          //     ],
-          //   },
+            // scales: {
+            //   yAxes: [
+            //     {
+            //       ticks: {
+            //         font: {
+            //           family: "Verdana", // Your font family
+            //           size: 14,
+            //         },
+            //         beginAtZero: true,
+            //       },
+            //     },
+            //   ],
+            // },
         }}
       />
     </div>

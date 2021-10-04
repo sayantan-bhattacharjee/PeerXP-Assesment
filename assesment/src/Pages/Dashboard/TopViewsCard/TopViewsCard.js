@@ -5,15 +5,17 @@ import { FaTrophy } from "react-icons/fa";
 
 // Style Imports
 import "./TopViewsCard.scss";
+import LineChart from "../../../Components/LineChart/LineChart";
 
 const TopViewsCard = () => {
   return (
     <div className="TopViewsCard">
       <Row className="h-100 align-items-center justify-content-center">
         <Col lg xl={3} className="h-100">
-          <div className="xp-custom-views xp-24H-views shadow p-3">
+          <div className="xp-custom-views xp-24H-views shadow p-3 position-relative">
             <h6 className="text-start lgt-gry">LAST 24H VIEWS</h6>
-            <div className="d-flex flex-column justify-content-center align-items-center">
+            <LineChart/>
+            <div className="xp-card-txt d-flex flex-column justify-content-center align-items-center position-absolute">
               <div className="d-flex flex-row justify-content-center align-items-center">
                 <TiArrowSortedUp className="green" size={34} />
                 <p className="mb-0 ms-2 gry font-40 xp-txt-views">781</p>

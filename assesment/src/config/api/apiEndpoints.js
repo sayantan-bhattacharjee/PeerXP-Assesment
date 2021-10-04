@@ -6,4 +6,10 @@ const joiner = '/ghost/api/v3/content';
 
 // PUBLIC ENDPOINTS
 
-export const dashboard = BASE_URL + joiner + '/posts?key=' + key;
+export const posts = BASE_URL + joiner + '/posts?key=' + key;
+
+export const pages = BASE_URL + joiner + '/pages?key=' + key;
+
+export const authors = BASE_URL + joiner + '/authors?key=' + key;
+
+export const tags = BASE_URL + joiner + '/tags?key=' + key;

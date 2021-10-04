@@ -8,7 +8,7 @@ import WeekDayChart from "../../../Components/WeekDayChart/WeekDayChart";
 // Style Imports
 import "./BottomCards.scss";
 
-const BottomCards = () => {
+const BottomCards = ({postData}) => {
   return (
     <div className="BottomCards">
       <Row className="h-100 align-items-center justify-content-center">

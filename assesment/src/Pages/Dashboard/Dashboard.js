@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect, useCallback} from "react";
 // Library Imports
 import { Row, Col } from "react-bootstrap";
 
@@ -9,8 +9,41 @@ import BottomCards from "./BottomCards/BottomCards";
 
 // Style Imports
 import "./Dashboard.scss";
+import { getPostAPI, getPageAPI } from "../../services/apiservice";
 
 const Dashboard = () => {
+const [postData, setPostData] = useState([]);
+const [pageData, setPageData] = useState([]);
+const [loading, setLoading] = useState(true);
+
+const fetchPosts = useCallback(async () => {
+  try {
+    const res = await getPostAPI();
+    console.log(111, res);
+    setPostData(res);
+  }catch (err) {
+    console.log(err);
+  }
+}, []);
+
+const fetchPages = useCallback(async () => {
+  try {
+    const res = await getPageAPI();
+    console.log(112, res);
+    setPageData(res);
+  }catch (err) {
+    console.log(err);
+  }
+}, []);
+
+useEffect(() => {
+  if (loading === true) {
+    fetchPosts();
+    fetchPages();
+    setLoading(false);
+  }
+}, [loading]);
+
   return (
     <div className="Dashboard">
       <TopViewsCard />
@@ -28,7 +61,7 @@ const Dashboard = () => {
           </div>
         </Col>
       </Row>
-      <BottomCards />
+      <BottomCards postData={postData}/>
     </div>
   );
 };
