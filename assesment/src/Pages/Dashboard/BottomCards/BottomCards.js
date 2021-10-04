@@ -54,7 +54,10 @@ const BottomCards = () => {
             <h6 className="text-start lgt-gry">TOTAL POSTS</h6>
             <div className="d-flex flex-row justify-content-center align-items-center">
               <p className="mb-0 ms-2 gry font-40 xp-txt-views">
-                {postData?.data?.posts?.length}
+                {postData?.data?.posts?.length}{" "}
+                <span style={{ fontSize: 20, color: "#000000" }}>
+                  Data Fetched via Context
+                </span>
               </p>
             </div>
           </div>
