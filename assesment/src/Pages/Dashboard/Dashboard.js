@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from "react";
+import React, { useState, useEffect, useCallback } from "react";
 // Library Imports
 import { Row, Col } from "react-bootstrap";
 
@@ -12,41 +12,41 @@ import "./Dashboard.scss";
 import { getPostAPI, getPageAPI } from "../../services/apiservice";
 
 const Dashboard = () => {
-const [postData, setPostData] = useState([]);
-const [pageData, setPageData] = useState([]);
-const [loading, setLoading] = useState(true);
+  const [postData, setPostData] = useState([]);
+  const [pageData, setPageData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-const fetchPosts = useCallback(async () => {
-  try {
-    const res = await getPostAPI();
-    console.log(111, res);
-    setPostData(res);
-  }catch (err) {
-    console.log(err);
-  }
-}, []);
+  const fetchPosts = useCallback(async () => {
+    try {
+      const res = await getPostAPI();
+      console.log(111, res);
+      setPostData(res);
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
 
-const fetchPages = useCallback(async () => {
-  try {
-    const res = await getPageAPI();
-    console.log(112, res);
-    setPageData(res);
-  }catch (err) {
-    console.log(err);
-  }
-}, []);
+  const fetchPages = useCallback(async () => {
+    try {
+      const res = await getPageAPI();
+      console.log(112, res);
+      setPageData(res);
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
 
-useEffect(() => {
-  if (loading === true) {
-    fetchPosts();
-    fetchPages();
-    setLoading(false);
-  }
-}, [loading]);
+  useEffect(() => {
+    if (loading === true) {
+      fetchPosts();
+      fetchPages();
+      setLoading(false);
+    }
+  }, [fetchPosts, fetchPages, loading]);
 
   return (
     <div className="Dashboard">
-      <TopViewsCard />
+      <TopViewsCard postData={postData} pageData={pageData} />
       <Row className="h-50 align-items-center justify-content-center py-4">
         <Col md lg={6} className="h-100">
           <div className="h-100 xp-post-per-month p-3">
@@ -61,7 +61,7 @@ useEffect(() => {
           </div>
         </Col>
       </Row>
-      <BottomCards postData={postData}/>
+      <BottomCards postData={postData} pageData={pageData} />
     </div>
   );
 };

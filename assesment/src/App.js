@@ -2,8 +2,7 @@ import React from "react";
 // Library Imports
 
 // Local Imports
-import Dashboard from "./Pages/Dashboard/Dashboard";
-import PostPage from "./Pages/PostPage/PostPage";
+import RoutesWrapper from "./routes/index";
 
 // Style Imports
 import "./App.scss";
@@ -11,8 +10,7 @@ import "./App.scss";
 function App() {
   return (
     <div className="App">
-      <Dashboard />
-      {/* <PostPage /> */}
+      <RoutesWrapper />
     </div>
   );
 }

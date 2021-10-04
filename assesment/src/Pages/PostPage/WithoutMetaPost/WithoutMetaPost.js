@@ -27,14 +27,14 @@ const WithoutMetaPost = () => {
                 key={i}
               >
                 <h6 className="mb-0 ms-2 me-3 gry font-30 xp-txt-views">{i}</h6>
-                <div className="w-100 d-flex flex-column justify-content-center align-items-center">
+                <div className="w-100 pt-1 d-flex flex-column justify-content-center align-items-center">
                   <div className="w-100 d-flex flex-row justify-content-between align-items-center">
                     <h5 className="mb-0 lgt-gry">
                       My 10 best posts in English.
                     </h5>
                     <MdLaunch className="gry" size={20} />
                   </div>
-                  <div className="w-100 d-flex flex-row justify-content-between align-items-center">
+                  <div className="w-100 mt-1 d-flex flex-row justify-content-between align-items-center">
                     <div className="d-flex flex-row justify-content-between align-items-center">
                       <AiFillEye />
                       <p className="mb-0">MARK AS VALID</p>
