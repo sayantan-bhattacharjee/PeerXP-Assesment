@@ -3,7 +3,7 @@ import React from "react";
 
 // Local Imports
 import Dashboard from "./Pages/Dashboard/Dashboard";
-// import PostPage from "./Pages/PostPage/PostPage";
+import PostPage from "./Pages/PostPage/PostPage";
 
 // Style Imports
 import "./App.scss";

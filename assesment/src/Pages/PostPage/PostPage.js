@@ -16,7 +16,7 @@ import "./PostPage.scss";
 const PostPage = () => {
   return (
     <div className="PostPage">
-      <Row className="h-50 align-items-center justify-content-center">
+      <Row className="h-50 align-items-start justify-content-center">
         <Col lg xl={4}>
           <WithoutMetaPost />
         </Col>
@@ -27,7 +27,7 @@ const PostPage = () => {
           <TooShortPost />
         </Col>
       </Row>
-      <Row className="h-50 align-items-center justify-content-center">
+      <Row className="h-50 align-items-start justify-content-center">
         <Col lg xl={4}>
           <LongMeta />
         </Col>
