@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 // Library Imports
 import { Row, Col } from "react-bootstrap";
 import WeekDayChart from "../../../Components/WeekDayChart/WeekDayChart";
+import { DataContext } from "../../../ContextStore/DataContext";
 
 // Local Imports
 
 // Style Imports
 import "./BottomCards.scss";
 
-const BottomCards = ({postData}) => {
+const BottomCards = () => {
+  const [postData, setPostData] = useContext(DataContext);
   return (
     <div className="BottomCards">
       <Row className="h-100 align-items-center justify-content-center">
@@ -51,7 +53,9 @@ const BottomCards = ({postData}) => {
           <div className="xp-custom-views xp-views-record shadow p-3">
             <h6 className="text-start lgt-gry">TOTAL POSTS</h6>
             <div className="d-flex flex-row justify-content-center align-items-center">
-              <p className="mb-0 ms-2 gry font-40 xp-txt-views">181</p>
+              <p className="mb-0 ms-2 gry font-40 xp-txt-views">
+                {postData?.data?.posts?.length}
+              </p>
             </div>
           </div>
         </Col>

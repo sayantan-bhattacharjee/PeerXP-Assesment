@@ -3,15 +3,18 @@ import React from "react";
 
 // Local Imports
 import RoutesWrapper from "./routes/index";
+import { ContextProvider } from "./ContextStore/DataContext";
 
 // Style Imports
 import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <RoutesWrapper />
-    </div>
+    <ContextProvider>
+      <div className="App">
+        <RoutesWrapper />
+      </div>
+    </ContextProvider>
   );
 }
 
