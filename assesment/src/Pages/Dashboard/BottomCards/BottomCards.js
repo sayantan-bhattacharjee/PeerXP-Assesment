@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 // Library Imports
 import { Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import WeekDayChart from "../../../Components/WeekDayChart/WeekDayChart";
 import { DataContext } from "../../../ContextStore/DataContext";
 
@@ -50,17 +51,21 @@ const BottomCards = () => {
           </div>
         </Col>
         <Col md lg={3} className="h-100">
-          <div className="xp-custom-views xp-views-record shadow p-3">
-            <h6 className="text-start lgt-gry">TOTAL POSTS</h6>
-            <div className="d-flex flex-row justify-content-center align-items-center">
-              <p className="mb-0 ms-2 gry font-40 xp-txt-views">
-                {postData?.data?.posts?.length}{" "}
-                <span style={{ fontSize: 20, color: "#000000" }}>
-                  Data Fetched via Context
-                </span>
-              </p>
+          <Link to="/posts-page" className="text-decoration-none">
+            <div className="xp-custom-views xp-views-record shadow p-3">
+              <h6 className="text-start lgt-gry text-decoration-none">
+                TOTAL POSTS
+              </h6>
+              <div className="d-flex flex-row justify-content-center align-items-center">
+                <p className="mb-0 ms-2 gry font-40  text-decoration-none">
+                  {postData?.data?.posts?.length}{" "}
+                  <span style={{ fontSize: 20, color: "#000000" }}>
+                    Data Fetched via Context
+                  </span>
+                </p>
+              </div>
             </div>
-          </div>
+          </Link>
         </Col>
       </Row>
     </div>

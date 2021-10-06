@@ -12,45 +12,50 @@ import { DataContext } from "../../../ContextStore/DataContext";
 import "./WithoutMetaPost.scss";
 
 const WithoutMetaPost = () => {
-  const [postData, setPostData] = useContext(DataContext);
+  const [postData] = useContext(DataContext);
 
   function filteredData() {
-    const noMetaPost = postData.data.posts.filter((res, i) => {
+    return postData?.data?.posts.filter((res, i) => {
       return res.meta_description !== null;
     });
-    console.log(133, noMetaPost);
   }
-  filteredData();
+  // console.log(133, filteredData());
 
   return (
-    <div className="WithoutMetaPost">
-      <div className="xp-custom-posts xp-24H-views shadow p-3">
-        <div className="d-flex flex-row justify-content-start align-items-center">
+    <div className="h-100 WithoutMetaPost">
+      <div className="h-100 xp-custom-posts xp-24H-views shadow">
+        <div className="xp-head-ht d-flex flex-row justify-content-start align-items-center pt-3 px-3">
           <BsFileEarmarkPost className="blu" size={20} />
           <h6 className="mb-0 mx-2 text-start lgt-gry">
             WITHOUT META DESCRIPTION
           </h6>
           <BsFillQuestionCircleFill className="lgt-blue" />
         </div>
-        <div className="d-flex flex-column justify-content-center align-items-center">
-          {filteredData.map((crd, i) => {
-            return (
-              <div
-                className="w-100 d-flex flex-row justify-content-start align-items-start mt-3"
-                key={i}
-              >
-                <h6 className="mb-0 ms-2 me-3 gry font-30 xp-txt-views">{i}</h6>
-                <div className="w-100 pt-1 d-flex flex-column justify-content-center align-items-center">
-                  <div className="w-100 d-flex flex-row justify-content-between align-items-center">
-                    <h5 className="mb-0 lgt-gry">
-                      My 10 best posts in English.
-                    </h5>
-                    <MdLaunch className="gry" size={20} />
+        <div className="xp-data-dv d-flex flex-column justify-content-start align-items-center p-3 my-3">
+          {filteredData() &&
+            filteredData().map((crd, i) => {
+              return (
+                <div
+                  className="w-100 d-flex flex-row justify-content-start align-items-start mb-3"
+                  key={i}
+                >
+                  <div className="xp-txt-views">
+                    <h6 className="mb-0 ms-2 me-3 text-start gry font-30">
+                      {i}
+                    </h6>
                   </div>
-                  <div className="w-100 mt-1 d-flex flex-row justify-content-between align-items-center">
+                  <div className="xp-center-wd flex-fill pt-1 d-flex flex-column justify-content-start align-items-start">
+                    <h5 className="mb-0 text-start lgt-gry added-ellipsis">
+                      {crd.title}
+                    </h5>
                     <div className="d-flex flex-row justify-content-between align-items-center">
                       <AiFillEye />
                       <p className="mb-0">MARK AS VALID</p>
+                    </div>
+                  </div>
+                  <div className="xp-icon-holder d-flex flex-column justify-content-between align-items-center ms-auto">
+                    <div className="xp-bullet-icon">
+                      <MdLaunch className="gry" size={20} />
                     </div>
                     <div className="d-flex flex-row justify-content-between align-items-center">
                       <HiPencil className="me-1" size={17} />
@@ -58,9 +63,8 @@ const WithoutMetaPost = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
         </div>
       </div>
     </div>

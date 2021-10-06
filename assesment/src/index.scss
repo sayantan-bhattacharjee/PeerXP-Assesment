@@ -65,10 +65,37 @@ body {
 .font-30 {
   font-size: 30px;
 }
+
+.added-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  width: calc(100% - 1px);
+}
+.xp-txt-views {
+  width: 50px;
+}
+.xp-icon-holder {
+  width: 55px;
+}
+.xp-center-wd {
+  width: calc(100% - 105px);
+}
 .xp-custom-views {
   height: 100%;
   border-radius: 10px;
 }
-// .xp-custom-posts {
-//   height: 400px;
-// }
+.xp-custom-posts {
+  overflow: hidden;
+}
+.xp-head-ht {
+  height: 50px;
+}
+.xp-data-dv {
+  max-height: 350px;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  display: none;
+}

@@ -3,7 +3,7 @@ import { Bar } from "react-chartjs-2";
 
 import "./BarChart.scss";
 
-const BarChart = () => {
+const BarChart = ({ data }) => {
   return (
     <div className="BarChart">
       <Bar
@@ -24,17 +24,10 @@ const BarChart = () => {
           ],
           datasets: [
             {
-              label: "# of Votes",
-              data: [121, 139, 39, 57, 42, 36, 50, 100, 200, 21, 11, 109],
+              // label: "# of Votes",
+              data: [data],
               backgroundColor: ["rgba(54, 162, 235, 0.2)"],
               borderColor: ["rgba(54, 162, 235, 1)"],
-              borderWidth: 1,
-            },
-            {
-              label: "# of Quantity",
-              data: [121, 139, 39, 57, 42, 36, 50, 100, 200, 21, 11, 109],
-              backgroundColor: ["rgba(255, 206, 86, 0.2)"],
-              borderColor: ["rgba(255, 206, 86, 1)"],
               borderWidth: 1,
             },
           ],
