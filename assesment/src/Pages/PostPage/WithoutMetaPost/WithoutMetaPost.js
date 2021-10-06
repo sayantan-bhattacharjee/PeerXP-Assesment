@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
 // Library Imports
 import { BsFileEarmarkPost, BsFillQuestionCircleFill } from "react-icons/bs";
 import { MdLaunch } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
 import { HiPencil } from "react-icons/hi";
 
+// Local Imports
+import { DataContext } from "../../../ContextStore/DataContext";
+
 // Style Imports
 import "./WithoutMetaPost.scss";
 
 const WithoutMetaPost = () => {
+  const [postData, setPostData] = useContext(DataContext);
+
+  function filteredData() {
+    const noMetaPost = postData.data.posts.filter((res, i) => {
+      return res.meta_description !== null;
+    });
+    console.log(133, noMetaPost);
+  }
+  filteredData();
+
   return (
     <div className="WithoutMetaPost">
       <div className="xp-custom-posts xp-24H-views shadow p-3">
@@ -20,7 +33,7 @@ const WithoutMetaPost = () => {
           <BsFillQuestionCircleFill className="lgt-blue" />
         </div>
         <div className="d-flex flex-column justify-content-center align-items-center">
-          {[0, 1, 2, 3, 4].map((crd, i) => {
+          {filteredData.map((crd, i) => {
             return (
               <div
                 className="w-100 d-flex flex-row justify-content-start align-items-start mt-3"
