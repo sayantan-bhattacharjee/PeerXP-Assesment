@@ -88,6 +88,7 @@ body {
 }
 .xp-custom-posts {
   overflow: hidden;
+  border-radius: 10px;
 }
 .xp-head-ht {
   height: 50px;
@@ -96,6 +97,7 @@ body {
   max-height: 350px;
   overflow-y: auto;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }

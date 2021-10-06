@@ -30,7 +30,7 @@ export const ContextProvider = (props) => {
   const fetchPages = useCallback(async () => {
     try {
       const res = await getPageAPI();
-      console.log(112, res);
+      // console.log(112, res);
       setPageData(res);
     } catch (err) {
       console.log(err);
@@ -39,7 +39,7 @@ export const ContextProvider = (props) => {
   const fetchAuthors = useCallback(async () => {
     try {
       const res = await getAuthorsAPI();
-      console.log(113, res);
+      // console.log(113, res);
       setAuthors(res);
     } catch (err) {
       console.log(err);
@@ -48,7 +48,7 @@ export const ContextProvider = (props) => {
   const fetchTags = useCallback(async () => {
     try {
       const res = await getTagsAPI();
-      console.log(114, res);
+      // console.log(114, res);
       setTags(res);
     } catch (err) {
       console.log(err);

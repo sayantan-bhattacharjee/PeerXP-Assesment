@@ -51,7 +51,11 @@ const BottomCards = () => {
           </div>
         </Col>
         <Col md lg={3} className="h-100">
-          <Link to="/posts-page" className="text-decoration-none">
+          <Link
+            to="/posts-page"
+            target="blank"
+            className="text-decoration-none"
+          >
             <div className="xp-custom-views xp-views-record shadow p-3">
               <h6 className="text-start lgt-gry text-decoration-none">
                 TOTAL POSTS
