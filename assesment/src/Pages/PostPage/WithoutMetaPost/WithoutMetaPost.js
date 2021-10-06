@@ -19,7 +19,11 @@ const WithoutMetaPost = () => {
       return res.meta_description !== null;
     });
   }
+<<<<<<< HEAD
   // console.log(133, filteredData());
+=======
+  console.log(123, filteredData())
+>>>>>>> 520b2cc5eed29cfdb2017e5818e5783cc526f5c3
 
   return (
     <div className="h-100 WithoutMetaPost">
@@ -31,6 +35,7 @@ const WithoutMetaPost = () => {
           </h6>
           <BsFillQuestionCircleFill className="lgt-blue" />
         </div>
+<<<<<<< HEAD
         <div className="xp-data-dv d-flex flex-column justify-content-start align-items-center p-3 my-3">
           {filteredData() &&
             filteredData().map((crd, i) => {
@@ -43,6 +48,22 @@ const WithoutMetaPost = () => {
                     <h6 className="mb-0 ms-2 me-3 text-start gry font-30">
                       {i}
                     </h6>
+=======
+        <div className="d-flex flex-column justify-content-center align-items-center">
+          {filteredData() && filteredData().map((crd, i) => {
+            return (
+              <div
+                className="w-100 d-flex flex-row justify-content-start align-items-start mt-3"
+                key={i}
+              >
+                <h6 className="mb-0 ms-2 me-3 gry font-30 xp-txt-views">{i}</h6>
+                <div className="w-100 pt-1 d-flex flex-column justify-content-center align-items-center">
+                  <div className="w-100 d-flex flex-row justify-content-between align-items-center">
+                    <h5 className="mb-0 lgt-gry added-ellipsis">
+                      {crd.title}
+                    </h5>
+                    <MdLaunch className="gry" size={20} />
+>>>>>>> 520b2cc5eed29cfdb2017e5818e5783cc526f5c3
                   </div>
                   <div className="xp-center-wd flex-fill pt-1 d-flex flex-column justify-content-start align-items-start">
                     <h5 className="mb-0 text-start lgt-gry added-ellipsis">
