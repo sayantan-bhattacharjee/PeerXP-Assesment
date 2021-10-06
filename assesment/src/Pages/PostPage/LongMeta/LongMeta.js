@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 // Library Imports
 import { BsFillQuestionCircleFill } from "react-icons/bs";
 import { FaPrayingHands } from "react-icons/fa";
@@ -58,7 +59,9 @@ const LongMeta = () => {
                   </div>
                   <div className="xp-icon-holder d-flex flex-column justify-content-between align-items-center ms-auto">
                     <div className="xp-bullet-icon">
-                      <MdLaunch className="gry" size={20} />
+                      <Link to="/links-page">
+                        <MdLaunch className="gry" size={20} />
+                      </Link>
                     </div>
                     <div className="d-flex flex-row justify-content-between align-items-center">
                       <HiPencil className="me-1" size={17} />
