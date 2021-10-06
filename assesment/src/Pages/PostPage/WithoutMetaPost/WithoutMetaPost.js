@@ -15,12 +15,11 @@ const WithoutMetaPost = () => {
   const [postData, setPostData] = useContext(DataContext);
 
   function filteredData() {
-    const noMetaPost = postData.data.posts.filter((res, i) => {
+    return postData?.data?.posts.filter((res, i) => {
       return res.meta_description !== null;
     });
-    console.log(133, noMetaPost);
   }
-  filteredData();
+  console.log(123, filteredData())
 
   return (
     <div className="WithoutMetaPost">
@@ -33,7 +32,7 @@ const WithoutMetaPost = () => {
           <BsFillQuestionCircleFill className="lgt-blue" />
         </div>
         <div className="d-flex flex-column justify-content-center align-items-center">
-          {filteredData.map((crd, i) => {
+          {filteredData() && filteredData().map((crd, i) => {
             return (
               <div
                 className="w-100 d-flex flex-row justify-content-start align-items-start mt-3"
@@ -42,8 +41,8 @@ const WithoutMetaPost = () => {
                 <h6 className="mb-0 ms-2 me-3 gry font-30 xp-txt-views">{i}</h6>
                 <div className="w-100 pt-1 d-flex flex-column justify-content-center align-items-center">
                   <div className="w-100 d-flex flex-row justify-content-between align-items-center">
-                    <h5 className="mb-0 lgt-gry">
-                      My 10 best posts in English.
+                    <h5 className="mb-0 lgt-gry added-ellipsis">
+                      {crd.title}
                     </h5>
                     <MdLaunch className="gry" size={20} />
                   </div>

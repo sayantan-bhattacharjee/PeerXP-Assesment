@@ -69,6 +69,14 @@ body {
   height: 100%;
   border-radius: 10px;
 }
+
+.added-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  width: 200px;
+}
 // .xp-custom-posts {
 //   height: 400px;
 // }
