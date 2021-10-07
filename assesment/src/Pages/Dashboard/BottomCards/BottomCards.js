@@ -53,7 +53,7 @@ const BottomCards = () => {
         <Col md lg={3} className="h-100">
           <Link
             to="/posts-page"
-            target="blank"
+            target="_blank"
             className="text-decoration-none"
           >
             <div className="xp-custom-views xp-views-record shadow p-3">

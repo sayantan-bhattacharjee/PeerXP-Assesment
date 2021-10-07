@@ -31,8 +31,8 @@ const LinkPage = () => {
             given but not done due to shortage of time.
           </h4>
           <h4 className="mt-5">
-            I have done the all setup and environment for the app and api call
-            in context & also have place some data in place accordingly but not
+            I have done all the setup and environment for the app and api call
+            in context & also have placed some data in place accordingly but not
             able to do 100% due to the time.
           </h4>
         </Col>
