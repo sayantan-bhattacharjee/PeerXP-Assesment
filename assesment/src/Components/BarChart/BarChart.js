@@ -36,6 +36,10 @@ const BarChart = ({ data }) => {
         width={"100%"}
         height={"100%"}
         options={{
+          plugins: {
+            legend: false, // Hide legend
+          },
+
           maintainAspectRatio: false,
           scales: {
             yAxes: [

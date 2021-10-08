@@ -6,7 +6,7 @@ const LineChart = () => {
   return (
     <div className="h-100 LineChart">
       <Line
-         data={{
+        data={{
           labels: [
             "Jan",
             "Feb",
@@ -35,6 +35,17 @@ const LineChart = () => {
         height={"100%"}
         options={{
           maintainAspectRatio: false,
+          plugins: {
+            legend: false, // Hide legend
+          },
+          scales: {
+            y: {
+              display: false, // Hide Y axis labels
+            },
+            x: {
+              display: false, // Hide X axis labels
+            },
+          },
           // scales: {
           //   yAxes: [
           //     {

@@ -12,9 +12,11 @@ const TopViewsCard = () => {
     <div className="TopViewsCard">
       <Row className="h-100 align-items-center justify-content-center">
         <Col lg xl={3} className="h-100">
-          <div className="xp-custom-views xp-24H-views shadow p-3 position-relative">
-            <h6 className="text-start lgt-gry">LAST 24H VIEWS</h6>
-            <LineChart />
+          <div className="xp-custom-views xp-24H-views shadow position-relative">
+            <h6 className="text-start lgt-gry p-3 mb-0">LAST 24H VIEWS</h6>
+            <div className="xp-classified-ht">
+              <LineChart />
+            </div>
             <div className="xp-card-txt d-flex flex-column justify-content-center align-items-center position-absolute">
               <div className="d-flex flex-row justify-content-center align-items-center">
                 <TiArrowSortedUp className="green" size={34} />
