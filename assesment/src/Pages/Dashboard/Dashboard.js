@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 // Library Imports
 import { Row, Col } from "react-bootstrap";
 
@@ -13,6 +13,17 @@ import "./Dashboard.scss";
 
 const Dashboard = () => {
   const [postData, setPostData] = useContext(DataContext);
+  const [postDataByMonth, setPostDataByMonth] = useState([]);
+  useEffect(()=> {
+    if(postData.data) {
+      setPostDataByMonth(postData['data'].posts.reduce((acc, item)=> {
+        var m = new Date(item.published_at).getMonth();
+        acc[m] = ++acc[m] || 1;
+        return acc
+      },new Array(12).fill(0)))
+    }
+  },[postData])
+
   return (
     <div className="Dashboard">
       <TopViewsCard />
@@ -26,7 +37,7 @@ const Dashboard = () => {
         <Col md lg={6} className="h-100">
           <div className="h-100 xp-post-per-month p-3">
             <h6 className="text-start lgt-gry">POST PER MONTH</h6>
-            <BarChart />
+            <BarChart data={postDataByMonth}/>
           </div>
         </Col>
       </Row>
